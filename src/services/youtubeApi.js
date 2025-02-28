@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Replace with your actual YouTube Data API key
-const API_KEY = 'AIzaSyBgpKHsO_xDO1PD8D2AmV2f_uCf12lbnXQ';
+// Get API key from environment variables
+const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 
 // Fetch trending live streams

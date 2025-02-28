@@ -37,7 +37,7 @@ const YouTubeAuth = ({ onAuthChange }) => {
         // Initialize the tokenClient for OAuth flow
         if (window.google && window.google.accounts && window.google.accounts.oauth2) {
           const client = window.google.accounts.oauth2.initTokenClient({
-            client_id: '850869125034-eose2lvtvhioj3i000cu8llpsfs18f7l.apps.googleusercontent.com',
+            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
             scope: 'https://www.googleapis.com/auth/youtube.force-ssl',
             callback: handleTokenResponse,
             error_callback: handleTokenError
@@ -70,7 +70,7 @@ const YouTubeAuth = ({ onAuthChange }) => {
           window.gapi.load('client', async () => {
             try {
               await window.gapi.client.init({
-                apiKey: 'AIzaSyBgpKHsO_xDO1PD8D2AmV2f_uCf12lbnXQ',
+                apiKey: import.meta.env.VITE_YOUTUBE_API_KEY,
                 discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest']
               });
               
@@ -96,7 +96,7 @@ const YouTubeAuth = ({ onAuthChange }) => {
         window.gapi.load('client', async () => {
           try {
             await window.gapi.client.init({
-              apiKey: 'AIzaSyBgpKHsO_xDO1PD8D2AmV2f_uCf12lbnXQ',
+              apiKey: import.meta.env.VITE_YOUTUBE_API_KEY,
               discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest']
             });
             

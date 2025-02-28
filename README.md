@@ -46,6 +46,8 @@ A React application for watching YouTube live streams with enhanced user interac
    VITE_YOUTUBE_API_KEY=your_api_key
    VITE_GOOGLE_CLIENT_ID=your_client_id
    ```
+   
+   > **Important**: Never commit your `.env` file to version control. The repository includes a `.env.example` file as a template. Your actual API keys should only exist in your local `.env` file.
 
 4. Start the development server:
    ```
